@@ -12,7 +12,7 @@
 - Missing references kept as `null` (not guessed, and not zero)
 - Automated tests and repeatable execution
 
-**Important:** All measurements in this PUBLIC demonstration are synthetic. The real Serpentis Regina fit-form registry belongs in the PRIVATE `serpentis-regina-plm-core` repository. House measurements are controlling standards; manufacturer values are retained for reference only. The calculated difference does not imply a fitting tolerance or a pass/fail result.
+**Important:** All measurements in this demonstration are synthetic. The actual Serpentis Regina fit-form register is maintained separately in [PLM Core](https://github.com/kelse-alt/serpentis-regina-plm-core). These examples are not approved house records. House measurements are controlling standards; manufacturer values are retained for reference only. The calculated difference does not imply a fitting tolerance or a pass/fail result.
 
 ## Run
 
@@ -32,4 +32,4 @@ Expected demo differences: BF-01 = +0.5 in, BF-02 = +0.75 in; BF-04 has no avail
 - Data lineage and approval status matter as much as the arithmetic.
 
 ## Next build
-Create a structured digital tech-pack style record, using **sample/demo data** and fields inspired by Serpentis Regina's master tech pack (pattern card, measurements, fit/comments, graded specifications). Preserve approved house source data privately.
+Create a structured digital tech-pack style record, using **sample/demo data** and fields inspired by technical-design workflows (pattern card, measurements, fit/comments, graded specifications). Keep educational fixtures separate from the approved house register.

@@ -2,7 +2,7 @@
 
 **Building fashion technology through practical JavaScript case studies.**
 
-This is a **public learning and portfolio repository** documenting the development of reusable technical-design code, progressing toward a private PLM-style system for the Serpentis Regina fashion house.
+This is a **public learning and portfolio repository** documenting the development of reusable technical-design code for the Serpentis Regina fashion house.
 
 ## Start here
 
@@ -32,6 +32,6 @@ Requires Node.js 20 or later. No third-party dependencies needed.
 
 ## Data and IP policy
 
-All public measurements are **fabricated educational examples**. No confidential tech packs, approved production standards, client details, employment materials or credentials should be committed here. The production house data and its approval/revision history are maintained in a separate **private** repository. A manufacturer-reference difference is **not** a tolerance check.
+Measurements in this repository are **fabricated educational examples**. The actual house register and its database implementation are maintained separately in [Serpentis Regina PLM Core](https://github.com/kelse-alt/serpentis-regina-plm-core). Keep this lab's synthetic examples distinct from those approved records. Credentials and unrelated confidential materials do not belong here. A manufacturer-reference difference is **not** a tolerance check.
 
 Built incrementally as a learning archive. Early-stage prototype; not a deployed or production-ready PLM system.
