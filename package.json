@@ -1,0 +1,11 @@
+{
+  "name": "serpentis-regina-tech-design-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Educational JavaScript case studies for fashion technical design with synthetic public data",
+  "scripts": {
+    "demo": "node case-studies/01-mannequin-measurement-registry/demo.mjs",
+    "test": "node --test"
+  }
+}
