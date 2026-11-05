@@ -1,0 +1,65 @@
+[
+  {
+    "id": "M1",
+    "title": "Chat with Copilot in Outlook",
+    "url": "https://support.microsoft.com/en-us/outlook/copilot-outlook/chat-with-copilot-in-outlook",
+    "use": "Specific in-Outlook chat path and limited mailbox questions without the add-on for eligible work/school accounts; verify actual availability.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M2",
+    "title": "Add knowledge sources to an agent in Agent Builder",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge",
+    "use": "My emails configuration, supported individual file formats and readiness; email knowledge uses mailbox content but does not prove exhaustive review.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M3",
+    "title": "Add knowledge sources to your declarative agent",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/knowledge-sources",
+    "use": "Capability table identifies native Email knowledge as license only; ordinary pay-as-you-go is not a substitute for that capability.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M4",
+    "title": "Build agents in Agent Builder",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+    "use": "Instructions/Knowledge placement, natural-language builder configuration and the 8,000-character Instructions limit.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M5",
+    "title": "List messages - Microsoft Graph",
+    "url": "https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0",
+    "use": "Paged retrieval and complete continuation links for an optional comprehensive audit worker.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M6",
+    "title": "Get incremental changes to messages in a folder",
+    "url": "https://learn.microsoft.com/en-us/graph/delta-query-messages",
+    "use": "Per-folder delta synchronization for a separately implemented service.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M7",
+    "title": "Office 365 Outlook connector",
+    "url": "https://learn.microsoft.com/en-us/connectors/office365/",
+    "use": "Standard connector availability, with actual action capabilities and limitations to be checked for the implementation.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M8",
+    "title": "Power Automate licensing FAQ",
+    "url": "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+    "use": "Some existing Microsoft 365 entitlements permit standard connector flows. This does not establish a user entitlement or include every AI action.",
+    "checked_date": "2026-11-04"
+  },
+  {
+    "id": "M9",
+    "title": "Microsoft Graph permissions reference",
+    "url": "https://learn.microsoft.com/en-us/graph/permissions-reference",
+    "use": "Read/body, record-write and send permissions must be evaluated separately; approval and consent policy still apply.",
+    "checked_date": "2026-11-04"
+  }
+]

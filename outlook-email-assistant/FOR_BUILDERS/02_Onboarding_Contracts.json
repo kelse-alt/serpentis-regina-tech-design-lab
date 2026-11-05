@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional v3 review exchange; not a prerequisite for chat onboarding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mode",
+    "coverage",
+    "profile",
+    "items",
+    "external_actions_enabled"
+  ],
+  "properties": {
+    "mode": {
+      "enum": [
+        "NATIVE_OUTLOOK_SEARCH",
+        "AGENT_EMAIL_KNOWLEDGE",
+        "SUPPLIED_CONTENT",
+        "FULL_AUDIT_SERVICE"
+      ]
+    },
+    "external_actions_enabled": {
+      "const": false
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "search_matches",
+        "messages_reviewed",
+        "threads_reviewed",
+        "sent_coverage",
+        "all_history_complete",
+        "gaps"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "SEARCH_SUBSET",
+            "SELECTED_THREAD",
+            "SUPPLIED_ONLY",
+            "ENUMERATED_SCOPE"
+          ]
+        },
+        "search_matches": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "messages_reviewed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "threads_reviewed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sent_coverage": {
+          "enum": [
+            "VERIFIED_SCOPE",
+            "PARTIAL",
+            "UNAVAILABLE",
+            "UNKNOWN"
+          ]
+        },
+        "all_history_complete": {
+          "type": "boolean"
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "onboarding_mode",
+        "role",
+        "authority",
+        "approval",
+        "persisted"
+      ],
+      "properties": {
+        "onboarding_mode": {
+          "enum": [
+            "NEW_STARTER",
+            "ESTABLISHED",
+            "UNCONFIRMED"
+          ]
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approval": {
+          "enum": [
+            "PROPOSED",
+            "READ_ONLY_ACCEPTED"
+          ]
+        },
+        "persisted": {
+          "type": "boolean"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "task",
+          "queue",
+          "ownership_basis",
+          "status",
+          "completion_source",
+          "due_raw",
+          "due_basis",
+          "source_ids",
+          "gap"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "task": {
+            "type": "string"
+          },
+          "queue": {
+            "enum": [
+              "MY_WORK",
+              "MY_DEPENDENCY",
+              "FYI_REFERENCE",
+              "COMPLETED_HISTORY"
+            ]
+          },
+          "ownership_basis": {
+            "enum": [
+              "EXPLICIT_ASSIGNMENT",
+              "AUTHORED_COMMITMENT",
+              "USER_CONFIRMED_DUTY",
+              "DIRECT_ROUTINE_GROUP_INSTRUCTION",
+              "INFERRED_UNCONFIRMED",
+              "NONE"
+            ]
+          },
+          "status": {
+            "enum": [
+              "ASSIGNED_COMPLETION_UNKNOWN",
+              "WAITING_ON_OTHER",
+              "NEEDS_DECISION",
+              "NEEDS_VERIFICATION",
+              "RESOLVED",
+              "REFERENCE"
+            ]
+          },
+          "completion_source": {
+            "enum": [
+              "UNKNOWN",
+              "EMAIL_REPORTED",
+              "USER_CONFIRMED",
+              "DIRECT_SYSTEM_VERIFIED"
+            ]
+          },
+          "due_raw": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "due_basis": {
+            "enum": [
+              "EXPLICIT",
+              "INFERRED_BEFORE_EVENT",
+              "UNKNOWN"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gap": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "queue": {
+                  "const": "COMPLETED_HISTORY"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "status": {
+                  "const": "RESOLVED"
+                },
+                "completion_source": {
+                  "enum": [
+                    "EMAIL_REPORTED",
+                    "USER_CONFIRMED",
+                    "DIRECT_SYSTEM_VERIFIED"
+                  ]
+                },
+                "source_ids": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "enum": [
+              "NATIVE_OUTLOOK_SEARCH",
+              "AGENT_EMAIL_KNOWLEDGE",
+              "SUPPLIED_CONTENT"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "coverage": {
+            "properties": {
+              "all_history_complete": {
+                "const": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "coverage": {
+            "properties": {
+              "all_history_complete": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mode": {
+            "const": "FULL_AUDIT_SERVICE"
+          },
+          "coverage": {
+            "properties": {
+              "kind": {
+                "const": "ENUMERATED_SCOPE"
+              },
+              "sent_coverage": {
+                "const": "VERIFIED_SCOPE"
+              },
+              "messages_reviewed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "threads_reviewed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "gaps": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

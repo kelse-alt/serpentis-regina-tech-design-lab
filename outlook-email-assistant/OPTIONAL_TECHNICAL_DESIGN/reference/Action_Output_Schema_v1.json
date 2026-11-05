@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:whbm-td-pilot:action-output:1.0",
+  "title": "Technical design sample action proposal",
+  "description": "Proposals only. Workflow validates identity, evidence, state, permissions and dates before any external action. Never interpret this schema as permission to send.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "items",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sample_id",
+          "match_status",
+          "disposition",
+          "action_class",
+          "risk_status",
+          "reason",
+          "owner_id",
+          "missing_fields",
+          "evidence",
+          "proposed_changes",
+          "draft"
+        ],
+        "properties": {
+          "sample_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "match_status": {
+            "type": "string",
+            "enum": [
+              "EXACT",
+              "AMBIGUOUS",
+              "UNMATCHED"
+            ]
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "PROPOSED",
+              "NEEDS_REVIEW",
+              "NO_ACTION",
+              "BLOCKED"
+            ]
+          },
+          "action_class": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "REQUEST_MISSING_INFORMATION",
+              "REQUEST_SHIP_COMMITMENT",
+              "REQUEST_DISPATCH_DETAILS",
+              "REQUEST_ARRIVAL_UPDATE",
+              "REQUEST_COMMENT_ACK",
+              "REQUEST_RESUBMISSION_COMMITMENT",
+              "INTERNAL_RECEIVING_CHECK",
+              "INTERNAL_FIT_REMINDER",
+              "INTERNAL_COMMENT_REMINDER",
+              "RECONCILE_PARTIAL_RECEIPT",
+              "RETURN_STATUS_CHECK",
+              "ACKNOWLEDGE_UPDATE",
+              "PREPARE_APPROVED_COMMENT_RELEASE",
+              "ESCALATE"
+            ]
+          },
+          "risk_status": {
+            "type": "string",
+            "enum": [
+              "ON_TRACK",
+              "AT_RISK",
+              "OVERDUE",
+              "UNKNOWN"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "owner_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "missing_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "raw_text",
+                "normalized_value",
+                "source_id",
+                "source_timestamp",
+                "authority"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "raw_text": {
+                  "type": "string"
+                },
+                "normalized_value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source_id": {
+                  "type": "string"
+                },
+                "source_timestamp": {
+                  "type": "string"
+                },
+                "authority": {
+                  "type": "string",
+                  "enum": [
+                    "VENDOR_REPORTED",
+                    "APPROVED_WIP",
+                    "APPROVED_PLM",
+                    "DIRECTORY",
+                    "RECEIVING",
+                    "CARRIER",
+                    "ACTION_LOG"
+                  ]
+                }
+              }
+            }
+          },
+          "proposed_changes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "old_value",
+                "new_value",
+                "source_id"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "enum": [
+                    "vendor_promised_ship_date",
+                    "vendor_reported_dispatch_date",
+                    "carrier",
+                    "tracking_number",
+                    "vendor_reported_eta",
+                    "vendor_acknowledged_comment_version",
+                    "vendor_blocker"
+                  ]
+                },
+                "old_value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "new_value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source_id": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "draft": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "vendor_id",
+                  "contact_ids",
+                  "cc_contact_ids",
+                  "reply_to_message_id",
+                  "subject",
+                  "body",
+                  "attachment_version_ids"
+                ],
+                "properties": {
+                  "vendor_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "contact_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "cc_contact_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "reply_to_message_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subject": {
+                    "type": "string"
+                  },
+                  "body": {
+                    "type": "string"
+                  },
+                  "attachment_version_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

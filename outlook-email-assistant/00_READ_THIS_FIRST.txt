@@ -1,0 +1,33 @@
+PERSONAL OUTLOOK EMAIL ASSISTANT | BEGINNER EDITION 3.0
+Prepared by Amaya Kelsea Hunt | 4 November 2026
+
+YOUR FIRST THREE STEPS
+1. Extract/unzip this folder. This is a handoff bundle, not an app installer or importable agent skill.
+2. Open 00_START_HERE.pdf. Follow Route A first: Outlook Mail > Inbox > Outlook's built-in Copilot chat.
+3. Open 01_START_IN_OUTLOOK.txt, copy its entire contents and paste into that chat. No reference files or tests are required.
+
+WHAT HAPPENS NEXT
+The assistant tries real email retrieval, asks a few role questions and proposes a personal workflow/action list. Review and correct it. You can approve read-only reviews and drafts in chat while leaving external changes off. Both new starters and established staff are supported.
+
+WHICH FILE GOES WHERE
+00_START_HERE.pdf: read it; it is your setup and everyday-use guide.
+01_START_IN_OUTLOOK.txt: paste the whole file into your Outlook Copilot chat to begin.
+02_AGENT_INSTRUCTIONS.txt: OPTIONAL custom-agent Instructions field; not needed for Route A.
+03_EVERYDAY_COMMANDS.txt: short commands after onboarding.
+04_IF_YOU_GET_STUCK.txt: troubleshooting, including URL-only dialogs and unavailable My emails.
+05_MOVE_TO_A_NEW_CHAT.txt: export/review a minimal handoff when changing conversations.
+06_START_MY_CUSTOM_AGENT.txt: optional start prompt after Route B is actually configured.
+OPTIONAL_TECHNICAL_DESIGN: add only for apparel/sample work; not required for first setup.
+FOR_BUILDERS and TESTS: optional implementation/validation material; beginners can ignore these.
+
+IMPORTANT DISTINCTION
+Built-in Copilot in Outlook and a custom agent's My emails knowledge source are different routes. Native Outlook chat may support limited inbox questions for eligible work accounts without an add-on. The custom email knowledge capability has its own licensing requirement. Neither route proves all mail was read. Account/client/policy availability must be checked in the actual session.
+
+Scope: role-neutral guidance for supported work/school Outlook experiences. Personal, shared and delegated mailboxes are not assumed to have the same features. If live mail access is unavailable, use only approved supplied content and label that mode honestly.
+
+This package starts as an on-demand assistant. It does not install a background service, send emails automatically, connect PLM/WIP or create scheduled reminders. See FOR_BUILDERS only when you want those additional capabilities.
+
+UPDATING FROM VERSION 2
+Route A: start a new native Outlook conversation with 01_START_IN_OUTLOOK.txt; optionally bring a reviewed profile using file 05.
+Route B: replace old agent Instructions with file 02, remove conflicting old setup instructions and verify the actual email source. Do not stack old and new full instruction sets.
+The older private demonstration is optional and is not required for this package. It does not connect to Outlook and is not the current beginner installation route.

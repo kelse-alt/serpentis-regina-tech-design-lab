@@ -1,0 +1,178 @@
+{
+  "version": "3.0",
+  "edition": "Beginner",
+  "created_date": "2026-11-04",
+  "author": "Amaya Kelsea Hunt",
+  "entrypoint": "00_START_HERE.pdf",
+  "recommended_starter": "01_START_IN_OUTLOOK.txt",
+  "optional_agent_instructions": "02_AGENT_INSTRUCTIONS.txt",
+  "default_mode": "ON_DEMAND_READ_ONLY",
+  "installed_service": false,
+  "live_mailbox_accessed_in_build": false,
+  "background_monitoring_enabled": false,
+  "sending_enabled": false,
+  "core_characters_lf": 7824,
+  "core_characters_crlf": 7860,
+  "new_scenario_count": 32,
+  "legacy_sample_scenario_count": 32,
+  "legacy_controller_scenario_count": 16,
+  "model_tenant_regression_executed": false,
+  "local_validation_checks": 40,
+  "files": [
+    {
+      "path": "00_READ_THIS_FIRST.txt",
+      "sha256": "eb62a25304f5ff910487c2762d72a4fe01da80d0132d7bf23498308d103f120d",
+      "size_bytes": 2959
+    },
+    {
+      "path": "00_START_HERE.pdf",
+      "sha256": "d7796e5c245450d03c724915c6c4bb4607676b1c8f04ed439ea844293e7cfc56",
+      "size_bytes": 69916
+    },
+    {
+      "path": "01_START_IN_OUTLOOK.txt",
+      "sha256": "7c993e397d9a5551e057df60968c3b16e19c06710146b9b3b54c013d1e69f3cf",
+      "size_bytes": 4529
+    },
+    {
+      "path": "02_AGENT_INSTRUCTIONS.txt",
+      "sha256": "4a8d765bbd74905243d72db733e10ac89ac16850812570413580c732c797da57",
+      "size_bytes": 7824
+    },
+    {
+      "path": "03_EVERYDAY_COMMANDS.txt",
+      "sha256": "88ffda0ec93713f36155380ed9f920a0487ad296e8a41e2d6b2938d61437e290",
+      "size_bytes": 3043
+    },
+    {
+      "path": "04_IF_YOU_GET_STUCK.txt",
+      "sha256": "5f572ed51784ca56612e8fceddecbc975bc01482c4322ec7abf6baeb02fe7271",
+      "size_bytes": 3885
+    },
+    {
+      "path": "05_MOVE_TO_A_NEW_CHAT.txt",
+      "sha256": "9593821a4208d17fab3de3b4b92d1ba23f2a1abaa5e6ec66d2665846b2da5d27",
+      "size_bytes": 1482
+    },
+    {
+      "path": "06_START_MY_CUSTOM_AGENT.txt",
+      "sha256": "e565b2e3ee2d72f0312b5d02d620594907cfa999a6d287bd690a64eb9f69f317",
+      "size_bytes": 1519
+    },
+    {
+      "path": "FOR_BUILDERS/00_READ_BEFORE_BUILDING.md",
+      "sha256": "8501b9fb301b329b2cdb34777f40c333d579dd3fbe17c06b03676f604c00f193",
+      "size_bytes": 1925
+    },
+    {
+      "path": "FOR_BUILDERS/01_Integration_and_Automation_Spec.md",
+      "sha256": "025b8c34a2be37df429e76cfe9acb6934ec432f2833c51e35ed6bd58a863bb6a",
+      "size_bytes": 4459
+    },
+    {
+      "path": "FOR_BUILDERS/02_Onboarding_Contracts.json",
+      "sha256": "a8d2c925c96d24c6240b6f4379e93542c3860d6fdd88918c60559e9b7656b33e",
+      "size_bytes": 6785
+    },
+    {
+      "path": "FOR_BUILDERS/03_Configuration_Example.json",
+      "sha256": "b09144efba11351f92d609367ed71571a1e4cf3be050d00fe326aa97ccd87094",
+      "size_bytes": 954
+    },
+    {
+      "path": "FOR_BUILDERS/04_Sources_and_Licensing.md",
+      "sha256": "e32bbfc5c0e7ac5b0a4d42957e52d283fb49a6e83b9f47516ccc93172ba607d4",
+      "size_bytes": 3190
+    },
+    {
+      "path": "FOR_BUILDERS/05_Pilot_Findings_and_Change_Log.md",
+      "sha256": "8cfb061a11e7a9021ad6f4c0918a693f58d9156c259827bfce202d6ea33a0865",
+      "size_bytes": 2905
+    },
+    {
+      "path": "FOR_BUILDERS/06_Builder_Handoff_Prompt.txt",
+      "sha256": "ab8b55b87b13ddcadab5d6d9a1fac7427afae47f1fdb9b049684e37d69f6c239",
+      "size_bytes": 1661
+    },
+    {
+      "path": "FOR_BUILDERS/07_Validation_Report.md",
+      "sha256": "29e20cad1e5e3c89369e6e451a55a99da88767c61d9c660484d95cad6ee537c2",
+      "size_bytes": 3138
+    },
+    {
+      "path": "FOR_BUILDERS/Source_Register.json",
+      "sha256": "b65ec04b293d5a2b28eca9936be5211172c7df1c91fade4de137e27af21e0cc6",
+      "size_bytes": 3057
+    },
+    {
+      "path": "OPTIONAL_TECHNICAL_DESIGN/00_READ_FIRST.txt",
+      "sha256": "336131ee3720177235ffc73ef6d59f60d0adbc3198ab6c75c513785ea5e345ef",
+      "size_bytes": 2034
+    },
+    {
+      "path": "OPTIONAL_TECHNICAL_DESIGN/reference/Action_Output_Schema_v1.json",
+      "sha256": "e4c78d97d7056e09a2bc2d3fabd9bdfc34aac8a9980bba3159cfc9f7721a37de",
+      "size_bytes": 7145
+    },
+    {
+      "path": "OPTIONAL_TECHNICAL_DESIGN/reference/Context_Profile_Schema_v1_1.json",
+      "sha256": "fede0ed7b6a55414131eaa41444922881b37ea007ec1627971fdd4d8bb0bf23f",
+      "size_bytes": 7171
+    },
+    {
+      "path": "OPTIONAL_TECHNICAL_DESIGN/reference/Technical_Design_Reference.md",
+      "sha256": "a935dc7dc8eec29918a5619c4b3ff475795886c3be55fd37ad3ec120d49712f6",
+      "size_bytes": 8161
+    },
+    {
+      "path": "OPTIONAL_TECHNICAL_DESIGN/reference/WIP_PLM_Field_Map.csv",
+      "sha256": "17c9b117a4ef526c07976153726f5be32b7057809890f32f5f8e12abe76a918c",
+      "size_bytes": 6027
+    },
+    {
+      "path": "TESTS/00_HOW_TO_CHECK.md",
+      "sha256": "e4dcc0e055375fd430326b0e6caba4a9c5921f00ecb4e8aac8f6108a06b1f053",
+      "size_bytes": 1440
+    },
+    {
+      "path": "TESTS/01_Beginner_Regression_Cases.json",
+      "sha256": "e9bc59c8705740fe96f524ae59a8763cc23c09a17d47718de622db8816a3290a",
+      "size_bytes": 12283
+    },
+    {
+      "path": "TESTS/Review_Record_Example.json",
+      "sha256": "e63a9f127d02a22e16373555f0889dbc413ee4afb4e5b5856048808f9200bbcf",
+      "size_bytes": 1389
+    },
+    {
+      "path": "TESTS/legacy/00_SCOPE_NOTE.txt",
+      "sha256": "199a8cf04dbf0270964c16f54e585eb597ec0916a42de92c6dbb82de649c2540",
+      "size_bytes": 412
+    },
+    {
+      "path": "TESTS/legacy/06_Synthetic_WIP.csv",
+      "sha256": "12abd36bed44bcefb9ac3ba32ec60388d1bc348295990288dd21595151369b9a",
+      "size_bytes": 3969
+    },
+    {
+      "path": "TESTS/legacy/09_Test_Cases.json",
+      "sha256": "500df16556066b0451e5f1eadb98c3abf9572437e59f77d253a9647cb1504f8f",
+      "size_bytes": 29461
+    },
+    {
+      "path": "TESTS/legacy/17_Synthetic_Email_Audit_Threads.json",
+      "sha256": "fc2dd3354f8112f8e97714c1caf1eeda442fc19727977493b6990302f8eb24d5",
+      "size_bytes": 6576
+    },
+    {
+      "path": "TESTS/legacy/Onboarding_Controller_Cases_v2.json",
+      "sha256": "7bb21560d306ff2a191c3525b4e314c827f4d1c06c4c5f1bc040fe1a73eec9b7",
+      "size_bytes": 7839
+    },
+    {
+      "path": "TESTS/legacy/README.md",
+      "sha256": "f22f1bf09d1a43696d96c8375907c8a9f5f97252489322a32c85c84c275e8881",
+      "size_bytes": 365
+    }
+  ]
+}

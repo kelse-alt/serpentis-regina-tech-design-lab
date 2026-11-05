@@ -1,0 +1,53 @@
+{
+  "mode": "SUPPLIED_CONTENT",
+  "coverage": {
+    "kind": "SUPPLIED_ONLY",
+    "search_matches": null,
+    "messages_reviewed": 3,
+    "threads_reviewed": 2,
+    "sent_coverage": "PARTIAL",
+    "all_history_complete": false,
+    "gaps": [
+      "Fictional fixture only; no live mailbox accessed."
+    ]
+  },
+  "profile": {
+    "onboarding_mode": "NEW_STARTER",
+    "role": "Product coordinator",
+    "authority": null,
+    "approval": "READ_ONLY_ACCEPTED",
+    "persisted": false
+  },
+  "external_actions_enabled": false,
+  "items": [
+    {
+      "id": "F-GROUP-1",
+      "task": "Print own briefing sheet",
+      "queue": "MY_WORK",
+      "ownership_basis": "DIRECT_ROUTINE_GROUP_INSTRUCTION",
+      "status": "ASSIGNED_COMPLETION_UNKNOWN",
+      "completion_source": "UNKNOWN",
+      "due_raw": "before the briefing",
+      "due_basis": "INFERRED_BEFORE_EVENT",
+      "source_ids": [
+        "F-M1"
+      ],
+      "gap": "Physical completion not reported."
+    },
+    {
+      "id": "F-DONE-1",
+      "task": "Create initial product specification",
+      "queue": "COMPLETED_HISTORY",
+      "ownership_basis": "EXPLICIT_ASSIGNMENT",
+      "status": "RESOLVED",
+      "completion_source": "EMAIL_REPORTED",
+      "due_raw": null,
+      "due_basis": "UNKNOWN",
+      "source_ids": [
+        "F-M2",
+        "F-M3"
+      ],
+      "gap": "System record not independently read."
+    }
+  ]
+}

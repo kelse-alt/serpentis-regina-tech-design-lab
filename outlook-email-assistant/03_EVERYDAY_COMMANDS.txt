@@ -1,0 +1,29 @@
+EVERYDAY COMMANDS | Use after onboarding in the same Outlook conversation
+These are on-demand requests, not background automations.
+
+1. REVIEW NEW WORK
+Review correspondence from the past 24 hours using the workflow we approved in this chat. Compare with the previous verified review. Show one current priority, up to five short action rows, up to three useful FYI updates, completed changes and only warranted unsent drafts. Check accessible latest replies first. Show the real scope/gaps; report matches separately from messages reviewed. Do not make external changes.
+
+2. UNDERSTAND ONE THREAD
+Explain the currently selected conversation: purpose, latest evidenced status, who owes what, my role or uncertainty, and the next justified step. Read available chronology, distinguish quoted history, and cite sources. If only this thread is accessible, say so. Make no changes.
+
+3. DRAFT A REPLY
+Prepare an unsent reply for the conversation I identify. First check the latest accessible received and sent messages, current unanswered need, responder and recipients. Preserve approved facts and deadlines. Do not invent review activity, promises, approvals or attachments. Show the draft here; do not send or save it to Outlook.
+
+4. REPORT A COMPLETED STEP
+Update this conversation's queue with my report: [describe what I completed]. Label completion as user-confirmed, close only that step and retain remaining project tasks/history. Do not change Outlook, calendar, WIP or PLM records. Do not claim permanent storage.
+Example: I printed the meeting line sheet. Mark the printing step complete; my own note-taking during the meeting remains separate.
+
+5. CORRECT MY SCOPE
+Correct my provisional profile: [state the correction]. Show which current tasks or proposed rules are affected. Do not infer new approval authority or silently expand action permissions.
+
+6. PREPARE FOR A MEETING
+Using the accessible meeting email and actually readable attachments, prepare a brief: purpose, required preparation, decisions/questions and a notes outline. Distinguish my own notes from official minutes. State unreadable attachments; never infer their contents from filenames. Do not create or modify a calendar event.
+
+7. ACCEPT A READ-ONLY WORKFLOW
+I accept the specific profile and workflow proposal just shown, with these corrections: [state corrections or none]. Use it for on-demand reading and unsent drafts in this conversation. Sending, mailbox/calendar changes, reminders and record writes remain disabled. Do not restart onboarding unless material new information requires it.
+
+8. PAUSE
+Pause this assistant's proposed outgoing work in this conversation. Show any unresolved items briefly. Do not claim that this pauses a separate service or recalls a sent message; identify such services separately if actually connected.
+
+You may use natural language instead of these exact commands. Replace bracketed text only in the command you choose. If no personal task is evidenced, the useful result may be a short team-context summary and no draft.

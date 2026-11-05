@@ -1,0 +1,31 @@
+{
+  "version": "3.0",
+  "status": "UNCONFIGURED_EXAMPLE_NOT_INSTALLED",
+  "preferred_route": "NATIVE_OUTLOOK_SEARCH",
+  "user": null,
+  "tenant": null,
+  "mailbox": null,
+  "onboarding_mode": "UNCONFIRMED",
+  "first_preview": {
+    "days": 7,
+    "max_distinct_conversations": 10,
+    "read_scope_approval": "required_unless_already_authorized"
+  },
+  "workflow_approval": "PROPOSED",
+  "send_enabled": false,
+  "outlook_draft_write_enabled": false,
+  "mailbox_changes_enabled": false,
+  "calendar_writes_enabled": false,
+  "wip_plm_writes_enabled": false,
+  "background_monitoring_enabled": false,
+  "persistent_profile_enabled": false,
+  "business_calendar": null,
+  "timezone": null,
+  "cutoffs": null,
+  "cadences": null,
+  "role_module": "OPTIONAL_USER_SELECTED",
+  "full_audit_service": "NOT_IMPLEMENTED",
+  "approval_controller": "NOT_IMPLEMENTED",
+  "instructions_file": "02_AGENT_INSTRUCTIONS.txt",
+  "starter_file": "01_START_IN_OUTLOOK.txt"
+}

@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:td-sample-pilot:context-profile:1.1",
+  "title": "Proposed email work context and obligations",
+  "description": "No authorization to send or change approved fields. Independent flow validation must verify scope, source evidence, coverage and owner identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "company_scope_id",
+    "user_id",
+    "approved_scope_id",
+    "profile_version",
+    "generated_at",
+    "profile_can_authorize_actions",
+    "coverage",
+    "claims",
+    "work_items",
+    "material_questions",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "company_scope_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "approved_scope_id": {
+      "type": "string"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "profile_can_authorize_actions": {
+      "const": false
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "requested_scope",
+        "actual_scope",
+        "date_start",
+        "date_end",
+        "retrieval_cutoff",
+        "folders_reviewed",
+        "messages_retrieved",
+        "messages_reviewed",
+        "pagination_exhausted",
+        "missing_context"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "COMPLETE_WITHIN_SCOPE",
+            "PARTIAL",
+            "BLOCKED"
+          ]
+        },
+        "requested_scope": {
+          "type": "string"
+        },
+        "actual_scope": {
+          "type": "string"
+        },
+        "date_start": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date_end": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieval_cutoff": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "folders_reviewed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "messages_retrieved": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "messages_reviewed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "pagination_exhausted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "missing_context": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "subject",
+          "claim",
+          "classification",
+          "supporting_source_ids",
+          "source_timestamps",
+          "confirmation_state",
+          "last_verified_at"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "OBSERVED",
+              "REPORTED",
+              "INFERRED",
+              "CONFLICT",
+              "UNKNOWN"
+            ]
+          },
+          "supporting_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_timestamps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confirmation_state": {
+            "type": "string",
+            "enum": [
+              "SOURCE_SUPPORTED",
+              "PROPOSED_FOR_CONFIRMATION",
+              "CONFLICT_REQUIRES_REVIEW",
+              "UNKNOWN"
+            ]
+          },
+          "last_verified_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "work_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "work_item_id",
+          "thread_id",
+          "sample_id",
+          "sample_match",
+          "business_intent",
+          "requester_id",
+          "accountable_owner_id",
+          "awaiting_party_id",
+          "state",
+          "explicit_due_at",
+          "inferred_due_at",
+          "supporting_source_ids",
+          "already_handled_source_ids",
+          "proposed_next_action",
+          "hold_external_action",
+          "hold_reason"
+        ],
+        "properties": {
+          "work_item_id": {
+            "type": "string"
+          },
+          "thread_id": {
+            "type": "string"
+          },
+          "sample_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sample_match": {
+            "type": "string",
+            "enum": [
+              "EXACT",
+              "AMBIGUOUS",
+              "UNMATCHED"
+            ]
+          },
+          "business_intent": {
+            "type": "string"
+          },
+          "requester_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "accountable_owner_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "awaiting_party_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "WAITING_VENDOR",
+              "WAITING_INTERNAL",
+              "NEEDS_DESIGNER_DECISION",
+              "RESOLVED",
+              "NEEDS_REVIEW"
+            ]
+          },
+          "explicit_due_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inferred_due_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supporting_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "already_handled_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed_next_action": {
+            "type": "string"
+          },
+          "hold_external_action": {
+            "type": "boolean"
+          },
+          "hold_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "material_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

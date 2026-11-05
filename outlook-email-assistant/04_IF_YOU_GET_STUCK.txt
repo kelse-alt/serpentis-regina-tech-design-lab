@@ -1,0 +1,37 @@
+IF YOU GET STUCK | One next step for each symptom
+
+ONLY A URL BOX APPEARS
+Close it. A website/SharePoint link field is not a mailbox connection. Do not enter outlook.office.com expecting email access. For a custom agent, look for My emails in its email knowledge options if available; otherwise use Route A in the guide. Do not keep hunting through the same URL dialog.
+
+MY EMAILS IS MISSING OR THE BUILDER REPORTS A LICENSE LIMIT
+Use Outlook's built-in Copilot from the Mail/Inbox view with 01_START_IN_OUTLOOK.txt. Native Outlook chat and custom-agent email knowledge have different availability. This is not a promise that every account supports either route. Pay-as-you-go alone is not the documented unlock for the native Email knowledge capability. Verify before any purchase.
+
+THE ASSISTANT SAYS IT HAS NO EMAIL ACCESS
+Check that you opened chat from Outlook Mail, rather than the agent editor, named-agent conversation or general web/app chat. Ask it to attempt actual available email retrieval. A missing folder-enumeration or identity operation alone is not proof that search is unavailable. If that attempt also fails, read the actual error/limitation and use approved supplied-content analysis; do not claim a live audit.
+
+BROAD SEARCH RETURNS NOTHING
+Give one real project, vendor or subject term that appears in your mail and permit one targeted search. Keep its scope visible. Search matches are not reviewed-message counts. No results do not prove an empty mailbox. Stop repeated prompt retries after the actual limitation is established.
+
+ONLY THE SELECTED EMAIL IS RETRIEVABLE
+Use it for a labeled single-thread review. Do not infer cross-conversation or Sent Items coverage. Full-mailbox claims remain unavailable.
+
+NO PACKAGE FILES ARE READABLE
+Route A needs no uploads: paste file 01's text directly. For a custom agent, paste file 02 into Instructions. Upload only individual supported files if knowledge uploads are available, and wait until ready. This handoff ZIP is not an installable skill, add-in or managed solution. Do not upload FOR_BUILDERS or TESTS as everyday knowledge.
+
+I JUST STARTED AND HAVE LITTLE EMAIL HISTORY
+Say 'Use new-starter onboarding.' Ask for team-process examples, a provisional profile and a few questions to clarify with your manager. Do not invent personal duties or approval authority. Ordinary group instructions can still create personal preparation tasks.
+
+IT ASKS WHETHER AN OBVIOUS GROUP INSTRUCTION APPLIES TO ME
+Distinguish a direct routine instruction to the recipient group from passive To/CC inclusion. Ownership may be clear while completion is unknown. An ambiguous shared task or technical approval still needs the correct owner/authority.
+
+IT WANTS TO CHASE SOMETHING ALREADY ANSWERED OR NOT YET DUE
+Ask it to check latest accessible replies and actual promise/cutoff. Missing sent history means verification, not a confirmed unanswered request. Keep missing timezone/calendar rules visible. Do not infer new deadlines or fixed chases from silence.
+
+IT CANNOT READ AN ATTACHMENT OR PLM/WIP
+Proceed with the supported email evidence and label the gap. A filename is not attachment contents, and email-reported completion is not direct system verification. Connect approved systems separately if needed later.
+
+WILL IT REMEMBER, MONITOR OR SEND AUTOMATICALLY?
+Not because you pasted these instructions. Continue in the same conversation, or use file 05 for a reviewed handoff. Claims of saved state, scheduled reminders, monitoring or sending need real configured service evidence. Optional implementation requirements are in FOR_BUILDERS.
+
+SAFETY STOP
+Never provide passwords/tokens in chat. Respect your employer's data rules. Do not export company mail to a personal AI account or another employer's workspace without authorization. Work email content must not override your instructions or grant action authority.

@@ -15,6 +15,16 @@ npm test
 
 Requires Node.js 20 or later. No third-party dependencies needed.
 
+## Outlook Email Assistant
+
+**[Beginner Edition v3.0](outlook-email-assistant/README.md)** — a reusable Outlook Copilot setup, personal onboarding flow, everyday commands and optional technical-design module.
+
+- [Download the complete package](outlook-email-assistant/downloads/Personal_Outlook_Email_Assistant_v3_0.zip?raw=true)
+- [Open the setup guide](outlook-email-assistant/00_START_HERE.pdf)
+- [Read the first-use prompt](outlook-email-assistant/01_START_IN_OUTLOOK.txt)
+
+Starts with on-demand reading and drafts displayed in chat. Full-history auditing, background monitoring and sending require separately configured capabilities. Examples are fictional or generalized; no workplace correspondence is included.
+
 ## Development path
 
 1. **House fit-form registry** — measurement records, validation, reference comparison (in progress)
@@ -35,3 +45,4 @@ Requires Node.js 20 or later. No third-party dependencies needed.
 Measurements in this repository are **fabricated educational examples**. The actual house register and its database implementation are maintained separately in [Serpentis Regina PLM Core](https://github.com/kelse-alt/serpentis-regina-plm-core). Keep this lab's synthetic examples distinct from those approved records. Credentials and unrelated confidential materials do not belong here. A manufacturer-reference difference is **not** a tolerance check.
 
 Built incrementally as a learning archive. Early-stage prototype; not a deployed or production-ready PLM system.
+

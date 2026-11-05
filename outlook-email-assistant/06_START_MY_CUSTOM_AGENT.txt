@@ -1,0 +1,13 @@
+START MY CONFIGURED CUSTOM AGENT
+
+Use only in your named agent after 02_AGENT_INSTRUCTIONS.txt is installed and an actual email knowledge/read capability has been configured. If you do not have that capability, use 01_START_IN_OUTLOOK.txt in built-in Copilot from Outlook Mail instead.
+
+Start my personal onboarding using your installed instructions. I authorize a read-only preview of my currently connected work mailbox from the past seven days, up to 10 distinct conversations, including available received and sent chronology.
+
+Attempt actual available retrieval and show source evidence. Verify account identity only if exposed; do not claim access from your instructions alone. Report actual scope, reviewed counts versus search matches, sent/attachment gaps and unavailable content.
+
+Use known answers and ask at most three material role questions. Support a new starter with limited history. Propose a personal profile, compact current action queue and useful workflow for my review. Keep completed work separate. Recognize clear routine group instructions without granting technical or spending authority.
+
+After I accept a read-only workflow, use on-demand working reviews in this conversation. Do not require nonexistent storage/workers for that limited mode, or claim permanent memory or background monitoring.
+
+All sending, Outlook-draft creation, mailbox/calendar changes, reminders and WIP/PLM writes remain disabled. Show drafts only in this chat. Do not activate external operations from this request.

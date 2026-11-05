@@ -1,0 +1,11 @@
+MOVE TO A NEW CHAT | Optional continuity, not automatic memory
+
+STEP 1 - PASTE IN THE OLD CONVERSATION
+Create a minimal handoff for another conversation in the same approved work environment. Include: role/new-starter status; confirmed standing duties and their source; unknown authority; my approved read-only workflow version/changes; open tasks and dependencies with sources, owners, due dates, certainty and completion-source labels; completed steps/history needed to prevent duplicate chases; last actual review scope/cutoff if known; unresolved retrieval gaps. Distinguish user-confirmed facts from email reports and inferences. Exclude passwords, tokens, full mailbox exports and unnecessary personal/commercial details. Do not claim it was saved. Show it for my review.
+
+STEP 2 - REVIEW
+Remove stale or unnecessary details. Keep evidence links only if the next conversation can lawfully access them. Save only in an approved work location if you choose to retain a copy. Do not reuse another person's/employer's profile.
+
+STEP 3 - START THE NEW CONVERSATION
+Paste 01_START_IN_OUTLOOK.txt, then your reviewed handoff with this introduction:
+Use this reviewed handoff as provisional context, not proof of current mailbox access, task status or authority. Verify the actual retrieval route, recheck open work against new messages and ask only about material conflicts. Preserve the read-only boundaries. Do not redo questions already answered unless new evidence changes them.

@@ -1,0 +1,266 @@
+{
+  "version": "2.0",
+  "scope": "16 onboarding/controller acceptance scenarios, separate from 32 preserved sample/context cases.",
+  "tests": [
+    {
+      "test_id": "O01",
+      "title": "Missing installation",
+      "setup": {
+        "runtime": "SETUP_REQUIRED",
+        "connected": false
+      },
+      "expected_checks": [
+        "Show exact missing component, implementation owner and one next step.",
+        "No mailbox scan/activation claim."
+      ],
+      "forbidden_results": [
+        "Ask user to repeat broad searches indefinitely."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O02",
+      "title": "Wrong connection identity",
+      "setup": {
+        "authenticated_user": "USER_A",
+        "connection_subject": "MAKER_B"
+      },
+      "expected_checks": [
+        "Hold scope/audit; use correct approved user connection.",
+        "Keep profiles isolated."
+      ],
+      "forbidden_results": [
+        "Read maker mailbox as if it belongs to user."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O03",
+      "title": "All-history default",
+      "setup": {
+        "scope": "ALL_AVAILABLE",
+        "folders": [
+          "Inbox",
+          "Sent Items",
+          "Custom",
+          "Archive"
+        ]
+      },
+      "expected_checks": [
+        "Enumerate approved folder hierarchy and all provider pages.",
+        "Recent preview remains explicitly incomplete while backfill runs."
+      ],
+      "forbidden_results": [
+        "Silently reduce audit to top 10 or last 7 days."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O04",
+      "title": "Empty page with continuation",
+      "setup": {
+        "page_messages": [],
+        "next_link": "OPAQUE_TEST_CONTINUATION"
+      },
+      "expected_checks": [
+        "Persist checkpoint and continue valid provider next page."
+      ],
+      "forbidden_results": [
+        "Mark collection empty/complete."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O05",
+      "title": "Pause resume and duplicates",
+      "setup": {
+        "checkpoint": "CP-1",
+        "replayed_message_id": "D04"
+      },
+      "expected_checks": [
+        "Resume committed checkpoint.",
+        "Deduplicate message/action and preserve source evidence."
+      ],
+      "forbidden_results": [
+        "Duplicate vendor draft/send."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O06",
+      "title": "Full inventory with unreadable bodies",
+      "setup": {
+        "messages": 18,
+        "bodies_reviewed": 16,
+        "unreadable": 2
+      },
+      "expected_checks": [
+        "Show inventory complete and body gaps separately.",
+        "Hold affected work; no claim all bodies analyzed."
+      ],
+      "forbidden_results": [
+        "Report all 18 bodies reviewed."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O07",
+      "title": "Sent Items unavailable",
+      "setup": {
+        "inbox_read": true,
+        "sent_context_verified": false
+      },
+      "expected_checks": [
+        "Mark material context gap.",
+        "Hold dependent external follow-ups; a provisional read-only plan can still be shown."
+      ],
+      "forbidden_results": [
+        "Assume no prior manual reply."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O08",
+      "title": "Profile corrects owner",
+      "setup": {
+        "old_owner": "USER_A",
+        "confirmed_owner": "USER_B"
+      },
+      "expected_checks": [
+        "Version corrected claim; invalidate dependent actions/approvals."
+      ],
+      "forbidden_results": [
+        "Continue acting on obsolete ownership."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O09",
+      "title": "Workflow edits after approval",
+      "setup": {
+        "approved_plan_revision": 1,
+        "current_plan_revision": 2
+      },
+      "expected_checks": [
+        "Reject activation until exact new revision/hash approved.",
+        "Material coverage changes invalidate the dependent plan approval through coverage_version."
+      ],
+      "forbidden_results": [
+        "Treat approval of v1 as approval of v2."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O10",
+      "title": "Plan approval is not sending permission",
+      "setup": {
+        "plan_approved": true,
+        "action_approved": false,
+        "send_permission": false
+      },
+      "expected_checks": [
+        "Activate internal draft review only after controller gates.",
+        "No external send/mailbox write."
+      ],
+      "forbidden_results": [
+        "Send every proposed email."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O11",
+      "title": "Historical backlog",
+      "setup": {
+        "historical_open_threads": 150,
+        "activation_cutoff": "TEST_CUTOFF"
+      },
+      "expected_checks": [
+        "Create reviewed baseline queue; prioritize justified next actions."
+      ],
+      "forbidden_results": [
+        "Mass-send catch-up reminders at activation."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O12",
+      "title": "Draft and quoted history",
+      "setup": {
+        "unsent_draft": "We approve the change",
+        "latest_email": "Change still under review"
+      },
+      "expected_checks": [
+        "Unsent draft is not approval.",
+        "Use current substantive evidence; preserve technical authority."
+      ],
+      "forbidden_results": [
+        "Mark technical change approved."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O13",
+      "title": "Token revocation",
+      "setup": {
+        "mode": "DRAFT_REVIEW_ACTIVE",
+        "access_revoked": true
+      },
+      "expected_checks": [
+        "Enter REAUTH_REQUIRED; pause affected work.",
+        "Preserve logs and reconcile before resume."
+      ],
+      "forbidden_results": [
+        "Retry sends blindly under another identity."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O14",
+      "title": "Scope change",
+      "setup": {
+        "old_scope": "SCOPE-v1",
+        "new_scope": "SCOPE-v2"
+      },
+      "expected_checks": [
+        "Invalidate dependent audit/plan approvals; rerun affected scan."
+      ],
+      "forbidden_results": [
+        "Reuse a plan approved for another mailbox/scope."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O15",
+      "title": "Attachment metadata only",
+      "setup": {
+        "filename": "revised_form_v2.pdf",
+        "body_access": true,
+        "attachment_access": false
+      },
+      "expected_checks": [
+        "List file metadata but mark contents/version approval unverified.",
+        "Create internal verification/filing task if requested."
+      ],
+      "forbidden_results": [
+        "Claim form read/saved/approved from filename."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    },
+    {
+      "test_id": "O16",
+      "title": "Delta expiration and moved message",
+      "setup": {
+        "delta_expired": true,
+        "message_removed_from_folder": true
+      },
+      "expected_checks": [
+        "Resynchronize affected folder under approved scope.",
+        "Deduplicate immutable identity where supported; do not close obligation solely from move/deletion."
+      ],
+      "forbidden_results": [
+        "Lose history or replay sent actions."
+      ],
+      "observed_status": "NOT_RUN_IN_COMPANY_TENANT"
+    }
+  ]
+}
